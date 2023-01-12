@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Details page</title>
+<style>
+body{
+background-color: lightblue;
+}
+</style>
+</h:head>
+<h:body>
+<h2>Electricity Bill</h2>
+<h3>Meter Id: </h3><h:outputText value="#{data.meterId}"/>
+<h3>consumer_Name:</h3> <h:outputText value="#{data.consumer_Name}"/>
+<h3>current_Meter_Reading: </h3><h:outputText value="#{data.current_Meter_Reading}"/>
+<h3>previous_Meter_Reading:</h3> <h:outputText value="#{data.previous_Meter_Reading}"/>
+<h3>unts_consumed:</h3> <h:outputText value="#{data.unts_cnsd}"/>
+<h3>subsidy:</h3> <h:outputText value="#{data.subsidy}"/>
+<h3>Amount payable:</h3> <h:outputText value="#{data.result}"/>
+</h:body>
+</html>

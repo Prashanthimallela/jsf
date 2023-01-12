@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Electricity Bill</title>
+</h:head>
+<h:body>
+   	<h3>Enter Bill Details</h3>
+	<h:form>
+	
+	MeterId:<h:inputText id="MeterId" value="#{elec.meterID}">
+		</h:inputText><br/>
+	ConsumerName:<h:inputText id="conName" value="#{elec.consumerName}">
+		</h:inputText><br/>	
+	CurrMeterReading:<h:inputText id="currMeterReading" value="#{elec.currMeterReading}">
+		</h:inputText><br/>
+	PrevMeterReading:<h:inputText id="prevMeterReading" value="#{elec.prevMeterReading}">
+		</h:inputText><br/>
+	
+	Zone fields:
+	    <h:selectOneRadio value="#{elec.zone}">
+        <f:selectItem itemValue="urban" itemLabel="urban"/>
+        <f:selectItem itemValue="rural" itemLabel="rural"/>           
+</h:selectOneRadio>
+		<br/>
+		<h:commandButton value="inputbill" action="elec.getBill" />
+		<h:commandButton value="showbill" action="ShowBill.xhtml" />
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>UserData</title>
+<style>
+body {
+background-image: url('https://www.teriin.org/sites/default/files/images/energy/new-in-energy/power-dis-energy.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+</style>
+</h:head>
+<h:body>
+<h:form>
+<h:outputLabel for="n1" value="MeterId:" /><br></br>
+<h:inputText value="#{data.meterId}" id="n1"></h:inputText><br></br><br></br>
+<h:outputLabel for="n1" value="Current_Meter_Reading:" /><br></br>
+<h:inputText value="#{data.current_Meter_Reading}" id="n2"></h:inputText><br></br><br></br>
+<h:outputLabel for="n1" value="Previous_Meter_Reading:" id="n3" /><br></br>
+<h:inputText value="#{data.previous_Meter_Reading}"></h:inputText><br></br><br></br>
+<h:outputLabel for="n4" value="Zone:" /><br></br>
+<h:selectOneRadio value="#{data.zone}">
+<f:selectItem itemValue="Urban" itemLabel="Urban" />
+<f:selectItem itemValue="Rural" itemLabel="Rural" />
+</h:selectOneRadio><br></br><br></br>
+<h:commandButton value="Input data" action="#{data.addData}"></h:commandButton>
+<h:commandButton value="Out Data" action="#{data.addStudent}"></h:commandButton><br></br>
+</h:form>
+</h:body>
+</html>
+
+ 
